@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+{% block body %}
+<div class="container">
+    <div class="img-fluid">
+        <img width= "100%" class="card-img-top" src="/assets/blog/images/{{ article.image }}" alt="{{ article.title }}"/>
+    </div>
+    <div class="content">
+         <p class="date">Ecrit le {{ article.createdAt | date("d/m/y") }} à {{ article.createdAt | date("h:i") }}
+         par <spam class="author"> {{ article.author }}</spam></p>
+         <h5 class="title">{{ article.title }}</h5>
+        <p class="content text-justify">
+            {{ article.content | raw }}
+        </p>
+    </div>
+    
+</div>
+
+{% endblock %}
